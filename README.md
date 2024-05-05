@@ -34,7 +34,7 @@ So I decided to use ‘Get-Applockerpolicy’ to see what was going on. Surprise
 Turned out that adding Appplocker policies via CSP with a different Enforcement mode than ‘AuditOnly’ mode (set in the script) did not get effectuated and errored out. But we could not add the extra ManagedInstaller rules in 'Enabled' mode during OSDcloud phase because we did not have any allow rules in that phase present.
 
 ## Solution 2:
-So I decided to use ‘Set-ApplockerPolicy’ to import the rules (Exe, Msi, Appx and Script) via xml files in ‘AuditOnly’ mode and merge them with the rules from the MS script. After the merge of the rules I used ‘Set-ApplockerPolicy’ again to export the rules, change ‘AuditOnly’ to ‘Enabled’ and import the rules (no merge). Since this would cause a reboot during ESP I used a script to wait for the end of ESP (user desktop ready) and then do the changes with an immediate reboot.
+So I decided to use ‘Set-ApplockerPolicy’ to import the rules (Exe, Msi, Appx and Script) via xml files in ‘AuditOnly’ mode and merge them with the rules from the MS script. After the merge of the rules I used ‘Set-ApplockerPolicy’ again to export the rules, change ‘AuditOnly’ mode to ‘Enabled’ and import the rules (no merge). Since this would cause a reboot during ESP I used a script to wait for the end of ESP (user desktop ready) and then do the changes with an immediate reboot following.
 
 The script can be found here: …..
 
