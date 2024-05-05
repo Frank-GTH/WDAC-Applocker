@@ -47,7 +47,7 @@ And after that Appplocker policy via CSP with corresponding enforcement mode set
 # WDAC policies
 Creating WDAC policies is fairly well documented, so I did not have any problems there. I created a basic policy in audit mode to enable the Managed Installer and trust the Patch My PC certificate, along with some basic protection:
 
-![image](https://github.com/Frank-GTH/WDAC-Applocker/assets/119516706/6ed28c0a-61f3-400a-a494-c2f240cd4a4c)
+![image](https://github.com/Frank-GTH/WDAC-Applocker/assets/119516706/cb48df68-8d95-47ec-a6ed-41bb28630e5d)
 
 However, implementing the policy was a challenge again.
 
