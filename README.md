@@ -52,7 +52,7 @@ Creating WDAC policies is fairly well documented, so I did not have any problems
 However, implementing the policy was a challenge again.
 
 ## Problem 3:
-Implementing the WDAC device based policy caused account ESP to break again, ‘identifying …’ forever and time out (even though I selected the WDAC settings "Update policy without reboot").
+Implementing the WDAC device based policy caused account ESP to break again, ‘identifying …’ forever and time out (even though I selected the WDAC settings "Update policy without rebooting").
 ## Solution 3:
 After a lot of testing I discovered that applying the WDAC policy to the device after ESP was working like a charm. So I created a dynamic group based on the device name starting with ‘MW1-‘. During ESP the devices were named ‘MW-‘. I added the rename action to the script at the end of the ESP and policies applied successfully through the dynamic group.
 
@@ -62,4 +62,6 @@ Results after implementing WDAC policies and enabling event ID 3090 in the CodeI
 ![image](https://github.com/Frank-GTH/WDAC-Applocker/assets/119516706/7ba95b57-67cc-404f-8817-f4f685bad2ea)
 ![image](https://github.com/Frank-GTH/WDAC-Applocker/assets/119516706/ef0b8c07-fe8e-4e02-aebe-f4b12b22d406)
 
-At that point in time we were getting close to project deadline and ran out of test time. Since WDAC and Applocker can be very intrusive we decided not to implement at this stage. I just wanted to share my journey so other admins can benefit.
+At that point in time we were getting close to project deadline and ran out of test time. Since WDAC and Applocker can be very intrusive we decided not to implement at this stage.
+
+I just wanted to share my journey so other admins can benefit.
