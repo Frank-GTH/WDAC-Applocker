@@ -29,9 +29,9 @@ The Applocker CSP (./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/apps/<g
 
 So I decided to use ‘Get-Applockerpolicy’ to see what was going on. Surprise, surprise: no Applocker configuration could be found but the ‘AuditOnly’ configuration from the MS script! So Applocker was effectively turned off.
 
-Turned out that adding Appplocker policies via CSP with a different Enforcement mode than ‘AuditOnly’ mode (set in the script) did not get effectuated and errored out. But we could not add the extra ManagedInstaller rules in 'Enabled' mode during OSDcloud phase because we did not have any allow rules in that phase present.
-
 ![image](https://github.com/Frank-GTH/WDAC-Applocker/assets/119516706/1f2b7cdb-ec79-4f5d-97d5-6395a69077c5)
+
+Turned out that adding Appplocker policies via CSP with a different Enforcement mode than ‘AuditOnly’ mode (set in the script) did not get effectuated and errored out. But we could not add the extra ManagedInstaller rules in 'Enabled' mode during OSDcloud phase because we did not have any allow rules in that phase present.
 
 ## Solution 2:
 So I decided to use ‘Set-ApplockerPolicy’ to import the rules (Exe, Msi, Appx and Script) via xml files in ‘AuditOnly’ mode and merge them with the rules from the MS script. After the merge of the rules I used ‘Set-ApplockerPolicy’ again to export the rules, change ‘AuditOnly’ to ‘Enabled’ and import the rules (no merge). Since this would cause a reboot during ESP I used a script to wait for the end of ESP (user desktop ready) and then do the changes with an immediate reboot.
