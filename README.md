@@ -40,7 +40,7 @@ The script can be found in this repository: PostESP-Script.ps1
 
 Results after the script and after ESP:
 
-![image](https://github.com/Frank-GTH/WDAC-Applocker/assets/119516706/307afd85-40f2-4136-a61d-bea2e4d389a6)
+![image](https://github.com/Frank-GTH/WDAC-Applocker/assets/119516706/ed3b2658-1b18-4360-9697-f9c2b39269c0)
 
 And after that Appplocker policy via CSP with corresponding enforcement mode settings applied nicely again.
 
