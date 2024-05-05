@@ -10,7 +10,7 @@ However, WDAC is poorly adapted and documented, so we ran into many challenges.
 # Managed Installer
 The Managed Installer can be enabled in Intune only tenant wide. We were still on Windows 10 (deployed via SCCM) and only wanted to test and implement the Managed Installer on the new Windows 11 workspace, which was still in test phase.
 
-So we used the Microsoft recommended way to enable the Managed Installer only on designated devices with this (GitHub - vincentverstraeten/ManagedInstaller: Managed Installer Proactive Remediation script from Microsoft) script during device ESP (as a Win32 application scripted with PSADT). The script basically merges 3 Applocker rulecollections with the existing Applocker rules as described here: Allow apps deployed with a WDAC managed installer - Windows Security | Microsoft Learn.
+So we used the Microsoft recommended way to enable the Managed Installer only on designated devices vai a script as decribed here: "GitHub - vincentverstraeten/ManagedInstaller: Managed Installer Proactive Remediation script from Microsoft" during device ESP (as a Win32 application scripted with PSADT). The script basically merges 3 Applocker rulecollections with the existing Applocker rules as described here: "Allow apps deployed with a WDAC managed installer - Windows Security | Microsoft Learn".
 
 The script seemed to work because we could see files tagged by ManagedInstaller afterwards on existing machines as described here: Managed installer and ISG technical reference and troubleshooting guide - Windows Security | Microsoft Learn. However, when running the script during ESP for new devices all went wrong.
 
