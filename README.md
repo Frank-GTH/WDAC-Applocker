@@ -12,7 +12,7 @@ The Managed Installer can be enabled in Intune only tenant wide. We were still o
 
 So we used the Microsoft recommended way to enable the Managed Installer only on designated devices vai a script as decribed here: "GitHub - vincentverstraeten/ManagedInstaller: Managed Installer Proactive Remediation script from Microsoft" during device ESP (as a Win32 application scripted with PSADT). The script basically merges 3 Applocker rulecollections with the existing Applocker rules as described here: "Allow apps deployed with a WDAC managed installer - Windows Security | Microsoft Learn".
 
-The script seemed to work because we could see files tagged by ManagedInstaller afterwards on existing machines as described here: Managed installer and ISG technical reference and troubleshooting guide - Windows Security | Microsoft Learn. However, when running the script during ESP for new devices all went wrong.
+The script seemed to work because we could see files tagged by ManagedInstaller afterwards on existing machines as described here: "Managed installer and ISG technical reference and troubleshooting guide - Windows Security | Microsoft Learn". However, when running the script during ESP for new devices all went wrong.
 
 ## Problem 1:
 ESP was broken, after device ESP either account ESP would not run or ran forever ‘identifying …’, timing out finally.
