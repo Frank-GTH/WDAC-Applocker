@@ -29,7 +29,7 @@ The Applocker CSP (./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/apps/<g
 
 So I decided to use ‘Get-Applockerpolicy’ to see what was going on. Surprise, surprise: no Applocker configuration could be found but the ‘AuditOnly’ configuration from the MS script! So Applocker was effectively turned off.
 
-Turned out that adding Appplocker policies via CSP with a different Enforcement mode from the ‘AuditOnly’ mode set in the script did not get effectuated and errored out.
+Turned out that adding Appplocker policies via CSP with a different Enforcement mode than ‘AuditOnly’ mode (set in the script) did not get effectuated and errored out. But we could not add the extra ManagedInstaller rules in 'Enabled' mode during OSDcloud phase because we did not have any allow rules in that phase present.
 
 ![image](https://github.com/Frank-GTH/WDAC-Applocker/assets/119516706/1f2b7cdb-ec79-4f5d-97d5-6395a69077c5)
 
