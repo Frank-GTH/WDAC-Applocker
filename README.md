@@ -22,7 +22,7 @@ ESP was broken: after device ESP either account ESP would not run or ran forever
 The script is merging the Managed Installer into the Applocker rulecollections but needs a reboot afterwards. This pending reboot breaks ESP. So we decided to run the script in the OSDcloud phase as a solution.
 
 ## Problem 2:
-Applocker Intune device configuration ran into problems and the configuration policies all got an error.
+Applocker Intune device configuration ran into problems and the configuration policies all got an error applying to the MangedInstaller enabled devices.
 
 # Applocker CSP
 The Applocker CSP (./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/apps/<group>/Policy) was used in a custom OMA-URI to deploy Applocker rules on Windows 10 and Windows 11. Exe, Msi and Script groups were set to ‘Enabled’, Appx was set to ‘AuditOnly’.
