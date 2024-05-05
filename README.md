@@ -42,7 +42,7 @@ Results after the script and after ESP:
 
 ![image](https://github.com/Frank-GTH/WDAC-Applocker/assets/119516706/307afd85-40f2-4136-a61d-bea2e4d389a6)
 
-And Appplocker policy via CSP with corresponding Enforcement settings will apply nicely again.
+And after that Appplocker policy via CSP with corresponding enforcement mode settings applied nicely again.
 
 # WDAC policies
 Creating WDAC policies is fairly well documented, so I did not have any problems there. I created a basic policy in audit mode to enable the Managed Installer and trust the Patch My PC certificate, along with some basic protection:
