@@ -52,7 +52,7 @@ Creating WDAC policies is fairly well documented, so I did not have any problems
 However, implementing the policy was a challenge again.
 
 ## Problem 3:
-Implementing the WDAC device based policy caused account ESP to break again, ‘identifying …’ forever and time out (even though I selected the WDAC settings option to apply without reboot).
+Implementing the WDAC device based policy caused account ESP to break again, ‘identifying …’ forever and time out (even though I selected the WDAC settings "Update policy without reboot").
 ## Solution 3:
 After a lot of testing I discovered that applying the WDAC policy to the device after ESP was working like a charm. So I created a dynamic group based on the device name starting with ‘MW1-‘. During ESP the devices were named ‘MW-‘. I added the rename action to the script at the end of the ESP and policies applied successfully through the dynamic group.
 
