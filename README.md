@@ -17,7 +17,7 @@ The script seemed to work because we could see files tagged by ManagedInstaller 
 However, when running the script during ESP for new devices all went wrong.
 
 ## Problem 1:
-ESP was broken, after device ESP either account ESP would not run or ran forever ‘identifying …’, timing out finally.
+ESP was broken: after device ESP either account ESP would not run or ran forever ‘identifying …’, timing out finally.
 ## Solution 1:
 The script is merging the Managed Installer into the Applocker rulecollections but needs a reboot afterwards. This pending reboot breaks ESP. So we decided to run the script in the OSDcloud phase as a solution.
 
