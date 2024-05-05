@@ -36,7 +36,7 @@ Turned out that adding Appplocker policies via CSP with a different Enforcement 
 ## Solution 2:
 So I decided to use ‘Set-ApplockerPolicy’ to import the rules (Exe, Msi, Appx and Script) via xml files in ‘AuditOnly’ mode and merge them with the rules from the MS script. After the merge of the rules I used ‘Set-ApplockerPolicy’ again to export the rules, change ‘AuditOnly’ mode to ‘Enabled’ and import the rules (no merge). Since this would cause a reboot during ESP I used a script to wait for the end of ESP (user desktop ready) and then do the changes with an immediate reboot following.
 
-The script can be found here: …..
+The script can be found in this repository: PostESP-Script.ps1
 
 Results after the script and after ESP:
 
